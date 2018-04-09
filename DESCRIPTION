@@ -1,0 +1,22 @@
+Package: d96assign
+Type: Package
+Title: Assigns students to schools based on shortest walking distance
+Version: 0.1.0
+Author: Jeff Miller
+Maintainer: Jeff Miller <jdmajsm@gmail.com>
+Description: Assigns students to schools to minimize walking distance subject to
+    space constraints at each school. Also allows users to create maps showing    
+    student assignments. This package implements in R a C# program written by Dennis
+    Fetterly for the Belmont Redwood Shores School District in Northern California.
+    I thank Dennis for helpful conversations and for sharing his code. I also thank
+    Sam Buttrey for showing me how to use lpSolve and for providing a    
+    template for the assignStudents function.
+Depends: R (>= 3.1.0)
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Imports: lpSolve,
+    ggmap,
+    readxl,
+    writexl
