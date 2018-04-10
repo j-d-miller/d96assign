@@ -2,9 +2,9 @@
 
 This package assigns kindergarten students to schools by minimizing total walking distance subject to constraints on school capacities.
 
-Dennis Fetterly came up with this approach for the Belmont-Redwood Shores school district in Silicon Valley. Dennis shared his ideas with me (Jeff Miller) and gave me a copy of his C# code. This package and the associate Shiny application, 'StudentAssign', is an implementation of Dennis's idea in R. It uses two key R packages: ggmap (to get walking distances from Google) and lpSolve (to figure out the optimal assignment). Sam Buttery, who maintains the R lpSolve package, helped me figure out how to call the integer programming optimizer in that package.
+Dennis Fetterly came up with this approach for the Belmont-Redwood Shores school district in Silicon Valley. Dennis shared his ideas with me (Jeff Miller) and gave me a copy of his C# code. This package and the associated Shiny application, 'StudentAssign', is an implementation of Dennis's idea in R for district 96 in suburban Cook County. It uses two key R packages: ggmap (to get walking distances from Google) and lpSolve (to figure out the optimal assignment). Sam Buttery, who maintains the R lpSolve package, helped me figure out how to call the integer programming optimizer in the lpSolve package.
 
-The idea behind the assignments is extremely simple - assign students to the school to which they live closest, to the extent that this is possible.
+The idea behind the assignments is extremely simple - assign students to the school to which they live closest, to the extent that this is possible. 
 
 There are two steps in the algorithm. First, the application gets the walking distance for each kindergarten student to each school. For District 96, this means getting four walking distances for each student: the distance to Ames, the distance to Blythe, the distance to Central, and the distance to Hollywood. Dennis Fetterly used Microsoft's Bing API and I am using Google (via the ggmap package) to get these distances.
 
