@@ -9,20 +9,17 @@
 #'   \item{lat}{latitude}
 #'   \item{school}{school name}
 #' }
-# #' @source \url{http://www.diamondse.info/}
 "tschoolGeo"
 
 #' Map of D96 area
 #'
 #' Colored Google Map of D96 area
 #'
-# #' @source \url{http://www.diamondse.info/}
 "riversideMap"
 
 #' Another map of D96 area
 #'
 #' Black and white Google Map of D96 area
 #'
-# #' @source \url{http://www.diamondse.info/}
 "riversideMapBW"
 
