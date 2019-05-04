@@ -8,7 +8,6 @@
 #' @param enrollDF a data frame containing the nx4 distance matrix
 #' @return NULL
 # @examples
-# function(kg, minA = 20, minB = 10, minC = 40, minH = 5, maxA = 40, maxB = 40, maxC = 60, maxH = 25)
 #
 
 #' @export
@@ -85,11 +84,12 @@ getDistanceMatrix <- function(enrollDF)
 
   tmatch <- match(enrollDF$Address, uAdds, nomatch = 0)
 
-  distMatrix <- data.frame(Ames = dAmesA[tmatch,"minutes"],
-                           Blythe = dBlytheA[tmatch,"minutes"],
-                           Central = dCentralA[tmatch,"minutes"],
-                           Hollywood = dHollywoodA[tmatch,"minutes"], gcK[tmatch,])
-
+  distMatrix <- data.frame(Ames = dAmesA$minutes[tmatch],
+                           Blythe = dBlytheA$minutes[tmatch],
+                           Central = dCentralA$minutes[tmatch],
+                           Hollywood = dHollywoodA$minutes[tmatch], 
+                           gcK[tmatch,])                        
+                        
   distMatrix[,1:4] <- round(distMatrix[,1:4], 1)
 
   enrollDFwDist <-  cbind(enrollDF[c("Student", "UID", "Siblings", "Street", "Apartment", "City",
