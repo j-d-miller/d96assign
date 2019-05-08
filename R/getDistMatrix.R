@@ -13,6 +13,7 @@
 #' @export
 getDistanceMatrix <- function(enrollDF)
 {
+# test
 
   enrollDF$Zip <- as.integer(enrollDF$Zip)
   enrollDF$Address <- paste( enrollDF$Street, enrollDF$City, enrollDF$State, enrollDF$Zip, "USA" , sep = ", " )
