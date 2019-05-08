@@ -13,7 +13,6 @@
 #' @export
 getDistanceMatrix <- function(enrollDF)
 {
-  # check that data frame names are still good
 
   enrollDF$Zip <- as.integer(enrollDF$Zip)
   enrollDF$Address <- paste( enrollDF$Street, enrollDF$City, enrollDF$State, enrollDF$Zip, "USA" , sep = ", " )
