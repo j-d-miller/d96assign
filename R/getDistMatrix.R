@@ -13,6 +13,7 @@
 #' @export
 getDistanceMatrix <- function(enrollDF)
 {
+  # check that data frame names are still good
 
   enrollDF$Zip <- as.integer(enrollDF$Zip)
   enrollDF$Address <- paste( enrollDF$Street, enrollDF$City, enrollDF$State, enrollDF$Zip, "USA" , sep = ", " )
@@ -87,9 +88,9 @@ getDistanceMatrix <- function(enrollDF)
   distMatrix <- data.frame(Ames = dAmesA$minutes[tmatch],
                            Blythe = dBlytheA$minutes[tmatch],
                            Central = dCentralA$minutes[tmatch],
-                           Hollywood = dHollywoodA$minutes[tmatch], 
-                           gcK[tmatch,])                        
-                        
+                           Hollywood = dHollywoodA$minutes[tmatch],
+                           gcK[tmatch,])
+
   distMatrix[,1:4] <- round(distMatrix[,1:4], 1)
 
   enrollDFwDist <-  cbind(enrollDF[c("Student", "UID", "Siblings", "Street", "Apartment", "City",
