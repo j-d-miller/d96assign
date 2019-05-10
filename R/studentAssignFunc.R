@@ -119,15 +119,19 @@ assignStudents <- function( kg,
     kgs <- rbind(kgs, kgsna)
   }
 
-  kgs <- kgs[order(kgs$Student), ]
+#  kgs <- kgs[order(kgs$Student), ]
+  kgs <- kgs[order(kgs$Last), ]
 
   final <- as.character( kgs$AlgoAssign )
   if(any(kgs$AlgoAssign == "Sibling") )
     final[kgs$AlgoAssign == "Sibling"] <- kgs$Siblings[kgs$AlgoAssign == "Sibling"]
   kgs$Assignment <- final
-  kgs <- kgs[,c("Student", "UID", "Street", "Apartment", "City",
-                    "State", "Zip", "Assignment", "Siblings", "Ames", "Blythe", "Central", "Hollywood", "lon",
-                   "lat")]
+#  kgs <- kgs[,c("Student", "UID", "Street", "Apartment", "City",
+#                    "State", "Zip", "Assignment", "Siblings", "Ames", "Blythe", "Central", "Hollywood", "lon",
+#                   "lat")]
+  kgs <- kgs[,c("Last", "First", "UID", "Street", "Apartment", "City",
+                "State", "Zip", "Assignment", "Siblings", "Ames", "Blythe", "Central", "Hollywood", "lon",
+                "lat")]
 
   # calculate walking times for the final assignment (algo + siblings)
   walkingTimes <- list( Ames = kgs[kgs$Assignment == "Ames", "Ames"],
