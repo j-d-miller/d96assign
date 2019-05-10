@@ -1,7 +1,7 @@
 Package: d96assign
 Type: Package
 Title: Assigns students to schools based on shortest walking distance
-Version: 0.1.1
+Version: 0.1.0
 Author: Jeff Miller
 Maintainer: Jeff Miller <jdmajsm@gmail.com>
 Description: Assigns students to schools to minimize walking distance subject to
