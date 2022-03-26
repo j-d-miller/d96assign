@@ -25,7 +25,6 @@ plotAssign <- function(sa, what = "AlgoAssign", ptitle = "", pcaption = "", dsiz
 
   sa$Older_Sibling <- sa$Siblings != "No"
 
-#  mapAll <- riversideMap +geom_point(data = tschoolGeo[1:4,], aes(x = lon, y = lat ) ,  size = 3, color = "red", shape = 15 ) +
   mapAll <- googMap + geom_point(data = tschoolGeo[1:4,], aes(x = lon, y = lat ) ,  size = 3, color = "red", shape = 15 ) +
   scale_colour_manual(name = "Schools", values = tuftePal) + scale_shape_manual( values = shapePal) +
     geom_point( data = sa , aes_string(x = "lon", y = "lat", colour = what, shape = "Older_Sibling") ,
