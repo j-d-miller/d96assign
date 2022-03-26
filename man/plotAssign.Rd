@@ -5,7 +5,7 @@
 \title{Plots student assignments}
 \usage{
 plotAssign(sa, what = "AlgoAssign", ptitle = "", pcaption = "",
-  dsize = 1, print_map = T, djitter = 3e-04)
+  dsize = 1, print_map = T, djitter = 3e-04, googMap)
 }
 \arguments{
 \item{sa}{a student assignment dataframe}
@@ -21,6 +21,8 @@ plotAssign(sa, what = "AlgoAssign", ptitle = "", pcaption = "",
 \item{print_map}{whether to print the map or return a ggmap object}
 
 \item{djitter}{amount of jitter}
+                                                                                                               
+\item{googMap}{a google map of Riverside in the ggmap format}                                                                                                               
 }
 \value{
 a plot showing how students are assigned
